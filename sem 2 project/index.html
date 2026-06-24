@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>💰 Smart Expense Tracker</h1>
+
+    <div class="dashboard">
+        <div class="box">
+            <h3>Total Expense</h3>
+            <p>₹<span id="totalExpense">0</span></p>
+        </div>
+
+        <div class="box">
+            <h3>Total Entries</h3>
+            <p id="entryCount">0</p>
+        </div>
+
+        <div class="box">
+            <h3>Budget Left</h3>
+            <p>₹<span id="budgetLeft">5000</span></p>
+        </div>
+    </div>
+
+    <div class="form">
+        <input type="text" id="name" placeholder="Expense Name">
+
+        <input type="number" id="amount" placeholder="Amount">
+
+        <select id="category">
+            <option>Food</option>
+            <option>Travel</option>
+            <option>Shopping</option>
+            <option>Bills</option>
+            <option>Other</option>
+        </select>
+
+        <input type="date" id="date">
+
+        <button onclick="addExpense()">Add Expense</button>
+    </div>
+
+    <input type="text"
+           id="search"
+           placeholder="🔍 Search Expense"
+           onkeyup="searchExpense()">
+
+    <p id="warning"></p>
+
+    <div id="expenseContainer"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
